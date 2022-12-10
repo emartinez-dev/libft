@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: franmart <franmart@student.42malaga.com    +#+  +:+       +#+         #
+#    By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/05 15:15:27 by franmart          #+#    #+#              #
-#    Updated: 2022/12/10 16:47:44 by franmart         ###   ########.fr        #
+#    Updated: 2022/12/10 17:09:34 by franmart         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -71,22 +71,27 @@ BONUS = ${addprefix ${SRC_DIR}, ${_BONUS}}
 BONUS_OBJ = ${BONUS:.c=.o}
 
 ${NAME}: ${OBJ}
-	${LIB} $@ $^
+	@${LIB} $@ $^
+	@echo "$(NAME) compiled!"
 
 %.o: %.c
-	${CC} ${FLAGS} -c $^ -o $@
+	@${CC} ${FLAGS} -c $^ -o $@
 
-all: ${NAME}
+all:
+	@${NAME}
 
 clean:
-		${RM} ${OBJ} ${BONUS_OBJ}
+	@echo "Removing files..."
+	@${RM} ${OBJ} ${BONUS_OBJ}
+	@echo "Done!"
 
 fclean: clean
-		${RM} ${NAME}
+	@${RM} ${NAME}
 
 re:	fclean all
 
 bonus: ${OBJ} ${BONUS_OBJ}
-		${LIB} ${NAME} ${OBJ} ${BONUS_OBJ}
+	@${LIB} ${NAME} ${OBJ} ${BONUS_OBJ}
+	@echo "$(NAME) bonus compiled!"
 
 .PHONY:	all clean fclean re bonus
