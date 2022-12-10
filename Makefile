@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+         #
+#    By: franmart <franmart@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/05 15:15:27 by franmart          #+#    #+#              #
-#    Updated: 2022/10/05 18:51:19 by franmart         ###   ########.fr        #
+#    Updated: 2022/12/10 16:47:44 by franmart         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,8 @@ FLAGS = -Wall -Wextra -Werror
 LIB = ar -rcs
 RM = rm -rf
 
-SRC =  ft_bzero.c\
+SRC_DIR = src/
+_SRC =  ft_bzero.c\
 	   ft_isalnum.c\
 	   ft_atoi.c\
 	   ft_calloc.c\
@@ -52,9 +53,11 @@ SRC =  ft_bzero.c\
 	   ft_tolower.c\
 	   ft_toupper.c
 
+SRC = ${addprefix ${SRC_DIR}, ${_SRC}}
+
 OBJ = ${SRC:.c=.o}
 
-BONUS = ft_lstnew_bonus.c\
+_BONUS = ft_lstnew_bonus.c\
 	    ft_lstadd_front_bonus.c\
 		ft_lstsize_bonus.c\
 		ft_lstlast_bonus.c\
@@ -63,6 +66,7 @@ BONUS = ft_lstnew_bonus.c\
 		ft_lstclear_bonus.c\
 		ft_lstiter_bonus.c\
 		ft_lstmap_bonus.c
+BONUS = ${addprefix ${SRC_DIR}, ${_BONUS}}
 
 BONUS_OBJ = ${BONUS:.c=.o}
 
