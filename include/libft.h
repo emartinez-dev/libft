@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 16:21:10 by franmart          #+#    #+#             */
-/*   Updated: 2022/12/10 17:54:03 by franmart         ###   ########.fr       */
+/*   Updated: 2022/12/10 18:18:08 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include "../lib/ft_printf/inc/ft_printf.h"
+# include "../lib/get_next_line/get_next_line_bonus.h"
 
 int		ft_atoi(const char *nptr);
 void	ft_bzero(void *s, size_t n);

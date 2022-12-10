@@ -6,7 +6,7 @@
 #    By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/05 15:15:27 by franmart          #+#    #+#              #
-#    Updated: 2022/12/10 17:54:26 by franmart         ###   ########.fr        #
+#    Updated: 2022/12/10 18:24:25 by franmart         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -62,8 +62,13 @@ _PF_SRC = ft_printf.c \
 	 		ft_auxiliary.c
 PF_SRC = ${addprefix ${PF_DIR}, ${_PF_SRC}}
 
+GNL_DIR = lib/get_next_line/
+_GNL_SRC = get_next_line_bonus.c
+GNL_SRC = ${addprefix ${GNL_DIR}, ${_GNL_SRC}}
+
 OBJ = ${SRC:.c=.o}
 PF_OBJ = ${PF_SRC:.c=.o}
+GNL_OBJ = ${GNL_SRC:.c=.o}
 
 _BONUS = ft_lstnew_bonus.c\
 	    ft_lstadd_front_bonus.c\
@@ -77,19 +82,18 @@ _BONUS = ft_lstnew_bonus.c\
 BONUS = ${addprefix ${SRC_DIR}, ${_BONUS}}
 BONUS_OBJ = ${BONUS:.c=.o}
 
-${NAME}: ${OBJ} ${PF_OBJ}
+${NAME}: ${OBJ} ${PF_OBJ} ${GNL_OBJ}
 	@${LIB} $@ $^
 	@echo "$(NAME) compiled!"
 
 %.o: %.c
 	@${CC} ${FLAGS} -c $^ -o $@
 
-all:
-	@${NAME}
+all: ${NAME}
 
 clean:
 	@echo "Removing files..."
-	@${RM} ${OBJ} ${BONUS_OBJ} ${PF_OBJ}
+	@${RM} ${OBJ} ${BONUS_OBJ} ${PF_OBJ} ${GNL_OBJ}
 	@echo "Done!"
 
 fclean: clean
