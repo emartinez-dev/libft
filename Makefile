@@ -6,7 +6,7 @@
 #    By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/05 15:15:27 by franmart          #+#    #+#              #
-#    Updated: 2022/12/10 18:24:25 by franmart         ###   ########.fr        #
+#    Updated: 2022/12/11 12:35:25 by franmart         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -63,7 +63,7 @@ _PF_SRC = ft_printf.c \
 PF_SRC = ${addprefix ${PF_DIR}, ${_PF_SRC}}
 
 GNL_DIR = lib/get_next_line/
-_GNL_SRC = get_next_line_bonus.c
+_GNL_SRC = get_next_line.c
 GNL_SRC = ${addprefix ${GNL_DIR}, ${_GNL_SRC}}
 
 OBJ = ${SRC:.c=.o}
