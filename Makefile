@@ -6,7 +6,7 @@
 #    By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/05 15:15:27 by franmart          #+#    #+#              #
-#    Updated: 2022/12/11 12:35:25 by franmart         ###   ########.fr        #
+#    Updated: 2022/12/12 20:37:49 by franmart         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,6 +21,7 @@ SRC_DIR = src/
 _SRC =  ft_bzero.c\
 	   ft_isalnum.c\
 	   ft_atoi.c\
+	   ft_atoi_base.c\
 	   ft_calloc.c\
 	   ft_isalpha.c\
 	   ft_isascii.c\
