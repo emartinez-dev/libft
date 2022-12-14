@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 20:12:33 by franmart          #+#    #+#             */
-/*   Updated: 2022/12/12 20:49:36 by franmart         ###   ########.fr       */
+/*   Updated: 2022/12/15 00:05:39 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ unsigned int	ft_atoi_base(const char *nptr, char *base)
 
 	i = 0;
 	result = 0;
-	base_len = ft_len(base);
+	base_len = ft_strlen(base);
 	if (ft_strnstr(nptr, "0x", ft_strlen(nptr)) != NULL)
 		i = 2;
 	if (i <= ft_strlen(nptr))
