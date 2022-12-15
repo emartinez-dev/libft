@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 20:12:33 by franmart          #+#    #+#             */
-/*   Updated: 2022/12/15 00:05:39 by franmart         ###   ########.fr       */
+/*   Updated: 2022/12/15 18:56:09 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ unsigned int	get_nbr(char c, char *base)
 unsigned int	ft_atoi_base(const char *nptr, char *base)
 {
 	unsigned int	result;
-	size_t 			i;
+	size_t			i;
 	size_t			base_len;
 
 	i = 0;

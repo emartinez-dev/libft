@@ -3,91 +3,94 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: franmart <franmart@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 16:49:10 by franmart          #+#    #+#             */
-/*   Updated: 2022/12/10 16:48:15 by franmart         ###   ########.fr       */
+/*   Updated: 2022/12/15 19:12:47 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/libft.h"
 
-unsigned int	ft_word_count(char const *s, char c)
+int	ft_count_words(char const *s, char c)
 {
-	unsigned int	count;
-	int				i;
+	int	i;
+	int	words;
 
 	i = 0;
-	count = 0;
-	if (!s || !c)
-		return (0);
-	while (s[i] == c)
-		i++;
-	while (s[i] != '\0')
+	words = 0;
+	if (s[i] != c)
+		words++;
+	while (s[i])
 	{
-		if (s[i] == c && s[i + 1] != '\0' && s[i + 1] != c)
-			count++;
+		if (s[i] == c && s[i + 1] != c && s[i + 1])
+			words++;
 		i++;
 	}
-	return (count + 1);
+	return (words + 1);
 }
 
-unsigned int	ft_next_del_pos(char const *s, char c)
+int	next_del(const char *s, char c)
 {
-	int				i;
-	unsigned int	s_len;
+	int	i;
 
-	s_len = ft_strlen(s);
 	i = 0;
-	while (s[i] != '\0')
-	{
-		if (s[i] == c)
-			return (i);
+	while (s[i] != '\0' && s[i] != c)
 		i++;
+	return (i);
+}
+
+char	**ft_split_words(char **arr, const char *s, const char c)
+{
+	int	i;
+	int	del_pos;
+
+	i = 0;
+	while (*s)
+	{
+		while (*s && *s == c)
+			s++;
+		if (*s)
+		{
+			del_pos = next_del(s, c);
+			arr[i] = ft_calloc(del_pos + 1, sizeof(char));
+			if (!arr[i])
+				return (NULL);
+			ft_memcpy(arr[i], s, del_pos);
+			s += del_pos;
+			i++;
+		}
 	}
-	return (s_len);
+	return (arr);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	unsigned int	i;
-	unsigned int	j;
-	unsigned int	next_del;
-	char			**arr_of_str;
+	char	**arr;
 
-	i = 0;
-	j = 0;
-	arr_of_str = malloc((ft_word_count(s, c) + 1) * sizeof(char *));
-	if (!arr_of_str)
-		return (0);
-	next_del = ft_next_del_pos(s, c);
-	while (i < ft_strlen(s))
-	{
-		if (next_del > 0)
-			arr_of_str[j++] = ft_substr(s, i, next_del);
-		i += next_del + 1;
-		if (i < ft_strlen(s))
-			next_del = ft_next_del_pos(s + i, c);
-	}
-	arr_of_str[j] = 0;
-	return (arr_of_str);
+	arr = ft_calloc(ft_count_words(s, c), sizeof(char *));
+	if (!arr)
+		return (NULL);
+	return (ft_split_words(arr, s, c));
 }
 
 /*
+#include <stdio.h> 
 int	main(void)
 {
-	char *str = NULL;
+	char *str = "nonempty";
 	char **arr;
 	int	j;
 
 	j = 0;
-	arr = ft_split(str, 0);
-	
+	arr = ft_split(str, '\0');
 	while (arr[j] != 0)
 	{
-		printf("%s", arr[j]);
+		printf("%s\n", arr[j]);
 		j++;
 	}
+	(void) j;
+	(void) arr;
 	return (0);
 }
 */
