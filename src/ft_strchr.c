@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: franmart <franmart@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 16:15:12 by franmart          #+#    #+#             */
-/*   Updated: 2022/12/10 16:48:15 by franmart         ###   ########.fr       */
+/*   Updated: 2023/01/06 12:13:37 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,26 +29,3 @@ char	*ft_strchr(const char *s, int c)
 		return ((char *)(s + i));
 	return (0);
 }
-
-/*
-#include <stdio.h>
-#include <string.h>
-
-int	main(void)
-{
-    char	*s;
-    char    *m;
-    char    *o;
-	int	i = 256;
-
-    s = "teste";
-	m = ft_strchr(s, i);
-	o = strchr(s, i);
-    printf("La mia: %s\nLa buena: %s\n", m, o);
-	if (m == o)
-		printf("OK!!");
-	else
-		printf("ERROR!!!");
-	return (0);
-}
-*/

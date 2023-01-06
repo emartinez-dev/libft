@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: franmart <franmart@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 16:23:42 by franmart          #+#    #+#             */
-/*   Updated: 2022/12/10 16:48:15 by franmart         ###   ########.fr       */
+/*   Updated: 2023/01/06 12:12:40 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,25 +18,3 @@ int	ft_isdigit(int c)
 		return (0);
 	return (1);
 }
-
-/*
-#include <ctype.h>
-#include <stdio.h>
-
-int	main(void)
-{
-	int	i;
-	int j;
-	int	testing;
-
-	testing = '1';
-	i = ft_isdigit(testing);
-	j = isdigit(testing);
-	printf("La mia: %d\nLa buena: %d\n", i, j);
-	if (i == j)
-		printf("OK!!");
-	else
-		printf("ERROR!!!");
-	return (0);
-}
-*/

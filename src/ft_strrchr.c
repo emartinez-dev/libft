@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 16:25:33 by franmart          #+#    #+#             */
-/*   Updated: 2022/09/25 21:58:48 by franmart         ###   ########.fr       */
+/*   Updated: 2023/01/06 12:13:55 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,26 +30,3 @@ char	*ft_strrchr(const char *s, int c)
 		return ((char *)(s + i));
 	return (0);
 }
-
-/*
-#include <stdio.h>
-#include <string.h>
-
-int	main(void)
-{
-    char	*s;
-    char    *m;
-    char    *o;
-	char	i = '\0';
-
-    s = "teste";
-	m = ft_strrchr(s, i);
-	o = strrchr(s, i);
-    printf("La mia: %s\nLa buena: %s\n", m, o);
-	if (m == o)
-		printf("OK!!");
-	else
-		printf("ERROR!!!");
-	return (0);
-}
-*/

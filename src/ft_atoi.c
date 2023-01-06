@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: franmart <franmart@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 23:35:48 by franmart          #+#    #+#             */
-/*   Updated: 2022/12/10 16:48:34 by franmart         ###   ########.fr       */
+/*   Updated: 2023/01/06 12:12:59 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,22 +39,3 @@ int	ft_atoi(const char *nptr)
 	}
 	return (result * sign);
 }
-
-/*
-#include <stdio.h>
-#include <stdlib.h>
-int	main(void)
-{
-	char i[20] = "    -312a311";
-	int	j;
-	int	bueno;
-
-	j = ft_atoi(i);
-	bueno = atoi(i);
-
-	printf("Mio: %d - Bueno: %d\n", j, bueno);
-	if (j == bueno)
-		printf("OK!!\n");
-	return (0);
-}
-*/

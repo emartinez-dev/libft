@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: franmart <franmart@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 12:51:50 by franmart          #+#    #+#             */
-/*   Updated: 2022/12/10 16:48:15 by franmart         ###   ########.fr       */
+/*   Updated: 2023/01/06 12:12:52 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,18 +84,3 @@ char	*ft_itoa(int n)
 	}
 	return (str);
 }
-
-/*
-int	main(int argc, char **argv)
-{
-	int	n;
-
-	n = 0;
-	if (argc == 2)
-	{
-		n = atoi(argv[1]);
-		printf("\n\n\nN original: %d. Mi N: %s\n", n, ft_itoa(n));
-	}
-	return (0);
-}
-*/

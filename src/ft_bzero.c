@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: franmart <franmart@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 16:18:26 by franmart          #+#    #+#             */
-/*   Updated: 2022/12/10 16:48:15 by franmart         ###   ########.fr       */
+/*   Updated: 2023/01/06 12:13:02 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/libft.h"
-//#include <stddef.h>
 
 void	ft_bzero(void *s, size_t n)
 {

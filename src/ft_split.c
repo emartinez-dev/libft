@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 16:49:10 by franmart          #+#    #+#             */
-/*   Updated: 2022/12/15 19:12:47 by franmart         ###   ########.fr       */
+/*   Updated: 2023/01/06 12:13:30 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,24 +73,3 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	return (ft_split_words(arr, s, c));
 }
-
-/*
-#include <stdio.h> 
-int	main(void)
-{
-	char *str = "nonempty";
-	char **arr;
-	int	j;
-
-	j = 0;
-	arr = ft_split(str, '\0');
-	while (arr[j] != 0)
-	{
-		printf("%s\n", arr[j]);
-		j++;
-	}
-	(void) j;
-	(void) arr;
-	return (0);
-}
-*/

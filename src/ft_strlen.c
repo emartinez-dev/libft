@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: franmart <franmart@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 16:25:04 by franmart          #+#    #+#             */
-/*   Updated: 2022/12/10 16:48:15 by franmart         ###   ########.fr       */
+/*   Updated: 2023/01/06 12:13:48 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,23 +23,3 @@ size_t	ft_strlen(const char *s)
 	}
 	return (i);
 }
-
-/*  
-#include <string.h>
-#include <stdio.h>
-int	main(void)
-{
-	int		i;
-	int		j;
-	char	*testing;
-
-	testing = "hola caracola!";
-	i = ft_strlen(testing);
-	j = strlen(testing);
-	printf("La mia: %d\nLa buena: %d\n", i, j);
-	if (i == j)
-		printf("OK!!");
-	else
-		printf("ERROR!!!");
-	return (0);
-} */

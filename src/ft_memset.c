@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: franmart <franmart@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 16:24:19 by franmart          #+#    #+#             */
-/*   Updated: 2022/12/10 16:48:15 by franmart         ###   ########.fr       */
+/*   Updated: 2023/01/06 12:13:19 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,36 +25,3 @@ void	*ft_memset(void *s, int c, size_t n)
 	}
 	return (s);
 }
-
-/*
-#include <ctype.h>
-#include <stdio.h>
-#include <string.h>
-
-int	main(void)
-{
-	int     a;
-    int     b;
-    void     *i;
-    void     *j;
-    int     c;
-    size_t  n;
-    a = 0;
-    i = &a;
-    b = 0;
-    j = &b;
-    
-
-    c = 69;
-    n = 5;
-	ft_memset(i, c, n);
-    memset(j, c, n);
-    
-	printf("La mia: %p\nLa buena: %p\n", i, j);
-	if (i != j)
-		printf("OK!!");
-	else
-		printf("ERROR!!!");
-	return (0);
-}
-*/
