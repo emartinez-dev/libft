@@ -3,6 +3,7 @@
 C programming can be very tedious when one doesn’t have access to the highly useful standard functions. 
 This project is about understanding the way these functions work, implementing them in C and learning to use them. 
 I have expanded my libft to implement more functions, so I can reuse them again on the next projects.
+Check the project tags to see the different versions of this library.
 
 ## How to use
 
