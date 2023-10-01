@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 16:21:10 by franmart          #+#    #+#             */
-/*   Updated: 2023/01/06 12:25:40 by franmart         ###   ########.fr       */
+/*   Updated: 2023/10/01 17:54:56 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@
 # include <limits.h>
 # include <stdlib.h>
 # include <unistd.h>
-# include "../lib/ft_printf/inc/ft_printf.h"
-# include "../lib/get_next_line/get_next_line.h"
+# include "ft_printf.h"
+# include "get_next_line.h"
 
 /* char functions */
 

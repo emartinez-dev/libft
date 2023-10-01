@@ -6,7 +6,7 @@
 #    By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/05 15:15:27 by franmart          #+#    #+#              #
-#    Updated: 2023/01/06 12:23:58 by franmart         ###   ########.fr        #
+#    Updated: 2023/10/01 17:57:36 by franmart         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -76,6 +76,8 @@ OBJ = ${SRC:.c=.o}
 PF_OBJ = ${PF_SRC:.c=.o}
 GNL_OBJ = ${GNL_SRC:.c=.o}
 
+INCLUDES = -I ./include -I ./lib/ft_printf/inc -I ./$(GNL_DIR)
+
 _BONUS = 	ft_lstnew_bonus.c\
 	    	ft_lstadd_front_bonus.c\
 			ft_lstsize_bonus.c\
@@ -94,7 +96,8 @@ ${NAME}: ${OBJ} ${PF_OBJ} ${GNL_OBJ}
 	@echo "$(NAME) compiled!"
 
 %.o: %.c
-	@${CC} ${FLAGS} -c $^ -o $@
+	@git submodule update --init
+	@${CC} ${FLAGS} $(INCLUDES) -c $^ -o $@
 
 all: ${NAME}
 
