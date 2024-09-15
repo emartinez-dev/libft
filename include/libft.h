@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 16:21:10 by franmart          #+#    #+#             */
-/*   Updated: 2024/09/15 15:40:45 by franmart         ###   ########.fr       */
+/*   Updated: 2024/09/15 16:36:05 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,7 @@ char			*ft_strdup(const char *s);
 int				ft_strlcat(char *dst, const char *src, size_t size);
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 int				ft_strncmp(const char *s1, const char *s2, size_t n);
+int				ft_strncmpi(const char *s1, const char *s2, size_t n);
 char			*ft_strnstr(const char *big, const char *little, size_t len);
 int				ft_strlcpy(char *dst, const char *src, size_t size);
 char			*ft_strchr(const char *s, int c);

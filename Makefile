@@ -6,7 +6,7 @@
 #    By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/05 15:15:27 by franmart          #+#    #+#              #
-#    Updated: 2023/10/01 17:57:36 by franmart         ###   ########.fr        #
+#    Updated: 2024/09/15 16:36:16 by franmart         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,6 +48,7 @@ _SRC =  ft_bzero.c\
 		ft_strjoin.c\
 		ft_strmapi.c\
 		ft_strncmp.c\
+		ft_strncmpi.c\
 		ft_strnstr.c\
 		ft_strlcat.c\
 		ft_strlcpy.c\
