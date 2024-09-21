@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 12:17:54 by franmart          #+#    #+#             */
-/*   Updated: 2023/01/06 12:18:13 by franmart         ###   ########.fr       */
+/*   Updated: 2024/09/21 12:49:06 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,18 @@
 
 t_list	*ft_lstreverse(t_list *list)
 {
-	t_list	*new_list;
 	t_list	*head;
-	t_list	*head_cpy;
+	t_list	*next;
+	t_list	*prev;
 
-	new_list = NULL;
+	prev = NULL;
 	head = list;
-	while (head != NULL)
+	while (head)
 	{
-		head_cpy = ft_lstnew(head->content);
-		ft_lstadd_front(&new_list, head_cpy);
-		head = head->next;
+		next = head->next;
+		head->next = prev;
+		prev = head;
+		head = next;
 	}
-	return (new_list);
+	return (prev);
 }
